@@ -8,8 +8,9 @@
 ### 2.2. [Configuración CMS](#id8)
 ### 2.3. [Configuración para ser Intérprete de PHP](#id9)
 ## 3. [Configurador Servidor MySQL](#id4)
-## 4. [Configuración Servidores Nginx](#id3)
-## 5. [Configurador máquina Balanceador](#id5)
+## 4. [Configurador máquina Balanceador](#id5)
+## 5. [Configuración Servidores Nginx](#id3)
+
 
 
 # Configuración Vagrant <a name="id1"></a>
