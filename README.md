@@ -13,11 +13,11 @@
 
 
 
-# Configuración Vagrant <a name="id1"></a>
+# 1- Configuración Vagrant <a name="id1"></a>
 Para hacer el trabajo más sencillo, crearemos un entorno Vagrant con el cual, añadiendo un script de aprovisionamiento, ahorraremos trabajo a la hora de configurar cada una de las máquinas desde dentro.
 
 
-## Configuración de Aprovisionamiento<a name="id2"></a>
+## 1.1- Configuración de Aprovisionamiento<a name="id2"></a>
 Los aprovisionamientos usados en cada una de las máquinas son diferentes dependiendo el uso de dicha máquina:
 
 **Servidores Webs Nginx:**
@@ -37,9 +37,9 @@ Los aprovisionamientos usados en cada una de las máquinas son diferentes depend
 ![](Capturas/Capturap.PNG)
 
 
-# Configurador máquina Servidor NFS e Intérprete PHP-FPM <a name="id6"></a>
+# 2- Configurador máquina Servidor NFS e Intérprete PHP-FPM <a name="id6"></a>
 
-## Configuración NFS<a name="id7"></a>
+## 2.1- Configuración NFS<a name="id7"></a>
 
 Lo primero que haremos una vez dentro de nuestra máquina NFS e Intérprete PHP-FPM será crear el directorio donde montaremos nuestro servidor Web. Para ello usaremos el siguiente comando `sudo mkdir /var/www/seguro -p`
 
@@ -56,8 +56,7 @@ Ahora pondremos el siguiente comando `sudo nano /etc/exports` y pondremos el sig
 Por último, reiniciaremos el servicio de NFS con el siguiente comando `sudo systemctl restart nfs-kernel-server`
 
 
-
-## Configuración CMS<a name="id8"></a>
+## 2.2- Configuración CMS<a name="id8"></a>
 
 Una vez el directorio que utilizaremos para almacenar nuestro CMS configurado para poder ser compartido con las máquinas indicadas, importaremos mediante `wget` el CMS que se usará, en este caso **JOOMLA**
 
@@ -71,7 +70,7 @@ Una vez descargado por completo, con el comando `sudo unzip Joomla_3-9-4-Stable-
 
 ![](Capturas/Captura16.PNG)
 
-## Configuración para ser Intérprete de PHP<a name="id9"></a>
+## 2.3- Configuración para ser Intérprete de PHP<a name="id9"></a>
 
 Para poder ser interprete de PHP, debemos tener todos los paquetes de este mismo instalados necesarios para la perfecta ejecución de nuestro CMS.
 
@@ -88,8 +87,7 @@ En dicho archivo también cambiaremos el "listen.owner" y "listen.group" a www-d
 ![](Capturas/Captura15.PNG)
 
 
-
-# Configurador Servidor MySQL <a name="id4"></a>
+# 3- Configurador Servidor MySQL <a name="id4"></a>
 
 En el servidor Mysql, importaremos desde el repositorio Github dado en la práctica, una base de datos y la configuraremos para nuestra red. Para ello previamente instalaremos git.
 
@@ -126,8 +124,7 @@ Una vez hecho esto, podemos eliminar el contenido de iaw-practica-lamp.
 Esta base de datos seria la que seleccionariamos una vez instalemos el CMS por completo.
 
 
-
-# Configurador máquina Balanceador <a name="id5"></a>
+# 4- Configurador máquina Balanceador <a name="id5"></a>
 
 Lo primero que haremos una vez entremos a nuestro balanceador será eliminar nuestro sitio activo de Nginx, para ello utilizaremos el siguiente comando `sudo rm -rf /etc/nginx/sites-enabled/default`
 
@@ -144,7 +141,7 @@ Por último, reiniciaremos el servicio de Nginx para asegurar que los cambios se
 Una vez hecho esto, ya tendremos nuestro **Balanceador de Carga con Nginx** terminado.
 
 
-# Configuración Servidores Nginx <a name="id3"></a>
+# 5- Configuración Servidores Nginx <a name="id3"></a>
 
 ***Los siguientes pasos se deberán realizar en ambas máquinas Nginx***
 
