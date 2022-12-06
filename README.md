@@ -169,3 +169,6 @@ Dentro de ese mismo archivo, descomentaremos las siguientes líneas:
 
 En esta última captura, la línea de *fastcgi_pass* borraremos la ruta por defecto que tiene y pondremos la dirección IP de nuestro Intérprete PHP.
 
+Por último, solo nos quedará probar acceder a nuestro CMS.
+
+![](Capturas/Capturaf.PNG)
