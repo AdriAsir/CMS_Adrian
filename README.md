@@ -21,7 +21,7 @@ Los aprovisionamientos usados en cada una de las máquinas son diferentes depend
 
 **Servidores Webs Nginx:**
 
-![](capturas/Capturan.PNG)
+![](/capturas/Capturan.PNG)
 
 **Servidor Mysql:**
 
